@@ -377,17 +377,6 @@ footer{
       padding: 0 130px;
     }
   }
-  .about_right{
-    padding-bottom: 30px;
-    .about_image{
-        img{
-            &:nth-child(3){
-                right: 0;
-                bottom: 0;
-            }
-        }
-    }
-  }
   .service_two{
     margin-bottom: 30px;
   }
@@ -401,7 +390,18 @@ footer{
   }  
 .ma5menu__toggle{
   display: block;
-}
+  }
+
+  .about_right{
+    padding-bottom: 40px;
+    .about_s_image{
+        img{
+            &:last-child{
+                right: 0;
+            }
+        }
+    }
+  }
 }
 @media screen and (max-width: $breakpoint-tablet) {
   .home{

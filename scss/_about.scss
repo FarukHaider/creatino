@@ -60,25 +60,25 @@
     }
   }
   .about_right{
-    .about_image{
-        text-align: right;
+    .about_s_image{
+        position: relative;
         img{
-            &:nth-child(3){
+            &:last-child{
                 position: absolute;
-                right: -110px;
-                bottom: 131px;
+                right: -40px;
+                bottom: 136px;
             }
         }
     }
   }
   .about_center{
-    .about_image{
-        text-align: center;
+    .about_s_image{
+        position: relative;
         img{
-            &:nth-child(3){
+            &:last-child{
                 position: absolute;
                 right: 0;
-                bottom: 131px;
+                bottom: 136px;
             }
         }
     }
@@ -103,6 +103,11 @@
             margin-top: 25px;
             color: var(--about_para-color);
         }
+        span{
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 25px;
+        }
     }
     .funfact_content{
         &:first-child{
@@ -114,9 +119,15 @@
             h1{
                 color: var(--funfact_yellow_color);
             }
+            span{
+                color: var(--funfact_yellow_color);
+            }
         }
         &:nth-child(3){
             h1{
+                color: var(--funfact_green_color);
+            }
+            span{
                 color: var(--funfact_green_color);
             }
         }

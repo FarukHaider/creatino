@@ -236,22 +236,22 @@ h5 {
   padding: 16px 48px;
 }
 
-.about_right .about_image {
-  text-align: right;
+.about_right .about_s_image {
+  position: relative;
 }
-.about_right .about_image img:nth-child(3) {
+.about_right .about_s_image img:last-child {
   position: absolute;
-  right: -110px;
-  bottom: 131px;
+  right: -40px;
+  bottom: 136px;
 }
 
-.about_center .about_image {
-  text-align: center;
+.about_center .about_s_image {
+  position: relative;
 }
-.about_center .about_image img:nth-child(3) {
+.about_center .about_s_image img:last-child {
   position: absolute;
   right: 0;
-  bottom: 131px;
+  bottom: 136px;
 }
 
 .funfact {
@@ -273,13 +273,24 @@ h5 {
   margin-top: 25px;
   color: var(--about_para-color);
 }
+.funfact .funfact_content span {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 25px;
+}
 .funfact .funfact_content:first-child h1 {
   color: var(--Creatino-Blue);
 }
 .funfact .funfact_content:nth-child(2) h1 {
   color: var(--funfact_yellow_color);
 }
+.funfact .funfact_content:nth-child(2) span {
+  color: var(--funfact_yellow_color);
+}
 .funfact .funfact_content:nth-child(3) h1 {
+  color: var(--funfact_green_color);
+}
+.funfact .funfact_content:nth-child(3) span {
   color: var(--funfact_green_color);
 }
 
@@ -665,13 +676,6 @@ footer .footer_bottom p {
   .home p {
     padding: 0 130px;
   }
-  .about_right {
-    padding-bottom: 30px;
-  }
-  .about_right .about_image img:nth-child(3) {
-    right: 0;
-    bottom: 0;
-  }
   .service_two {
     margin-bottom: 30px;
   }
@@ -683,6 +687,12 @@ footer .footer_bottom p {
   }
   .ma5menu__toggle {
     display: block;
+  }
+  .about_right {
+    padding-bottom: 40px;
+  }
+  .about_right .about_s_image img:last-child {
+    right: 0;
   }
 }
 @media screen and (max-width: 767px) {
