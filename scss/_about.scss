@@ -144,6 +144,12 @@
     padding: 100px 0 65px 0;
     .section_title{
         font-size: 40px;
+        position: relative;
+        img{    
+            position: absolute;
+            top: -86px;
+            right: 0;
+        }
     }
     .location_image{
         margin-bottom: 35px;

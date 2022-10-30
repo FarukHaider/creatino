@@ -127,10 +127,12 @@ h5 {
 
 .service_two_bg_1 {
   background: url(../images/s1.png);
+  background-repeat: no-repeat;
 }
 
 .service_two_bg_2 {
   background: url(../images/s2.png);
+  background-repeat: no-repeat;
 }
 
 .icon_section {
@@ -335,6 +337,13 @@ h5 {
 
 .location .section_title {
   font-size: 40px;
+  position: relative;
+}
+
+.location .section_title img {
+  position: absolute;
+  top: -86px;
+  right: 0;
 }
 
 .location .location_image {
@@ -637,6 +646,9 @@ footer .footer_bottom p {
   .about_right .about_image img:nth-child(3) {
     right: 0;
     bottom: 0;
+  }
+  .service_two {
+    margin-bottom: 30px;
   }
 }
 
