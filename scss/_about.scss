@@ -89,7 +89,7 @@
     justify-content: space-around;
     text-align: center;
     flex-flow: row wrap;
-    padding: 125px 0;
+    padding: 65px 0 120px 0;
     .funfact_content{
         h1{
             font-size: 60px;
@@ -132,7 +132,7 @@
     }
 }
 .locaton_left{
-    padding-right: 50px;
+    padding-right: 35px;
     padding-left: 0;
     h2{
         span{
@@ -163,9 +163,12 @@
             top: 35px;
             text-transform: uppercase;    
             text-align: center;
-            line-height: 28px;
+            line-height: 30px;
             color: var(--title_h2-color);
             font-weight: 600;
+        }
+        img{
+            width: 100%;
         }
     }
   }

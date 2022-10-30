@@ -9,7 +9,7 @@
         font-weight: 700;
         letter-spacing: -1px;
         margin-bottom: 15px;
-        padding: 0 275px;
+        padding: 0 255px;
         span{
             color: var(--second-color);
         }
@@ -83,8 +83,12 @@ h5{
 .service_two_bg_1{
     background: url(../images/s1.png);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .service_two_bg_2{
     background: url(../images/s2.png);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
