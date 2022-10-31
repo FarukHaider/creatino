@@ -2,6 +2,7 @@
 @import url('bootstrap.min.css');
 @import url('fonts/ionicons/css/ionicons.css');
 @import url('../plugin/menu/ma5-menu.css');
+@import url('animate.min.css');
 
 :root {
   --title_color: #373F50;
@@ -141,9 +142,11 @@ img{
   h6{
     font-size: 14px;
   }
-  
 .section_title{
   margin-bottom: 50px;
+  visibility: visible;
+  animation-duration: 2000ms;
+  animation-name: fadeInUp;
   h2{
     margin-bottom: 15px;
   }
@@ -243,6 +246,9 @@ header{
 }
 footer{
   padding: 100px 0 0 0;
+  visibility: visible; 
+  animation-duration: 1500ms; 
+  animation-name: fadeInUp;
   h6{
     color: var(--footer_number);
     font-weight: 700;
@@ -387,6 +393,11 @@ footer{
     .about_list{
       margin-bottom: 50px;
     }
+    .about_s_image{
+      .zoom-in-zoom-out{
+        right: 35px;
+      }
+    }
   }  
 .ma5menu__toggle{
   display: block;
@@ -395,11 +406,9 @@ footer{
   .about_right{
     padding-bottom: 40px;
     .about_s_image{
-        img{
-            &:last-child{
-                right: 0;
-            }
-        }
+      .zoom-in-zoom-out{
+        right: 20px;
+      }
     }
   }
 }

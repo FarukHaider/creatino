@@ -2,6 +2,7 @@
 @import url("bootstrap.min.css");
 @import url("fonts/ionicons/css/ionicons.css");
 @import url("../plugin/menu/ma5-menu.css");
+@import url("animate.min.css");
 :root {
   --title_color: #373F50;
   --white: #ffffff;
@@ -45,6 +46,11 @@ body {
   letter-spacing: -1px;
   margin-bottom: 15px;
   padding: 0 255px;
+  visibility: visible;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
 }
 .home h1 span {
   color: var(--second-color);
@@ -52,6 +58,11 @@ body {
 .home p {
   margin-bottom: 0;
   padding: 0 375px;
+  visibility: visible;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
 }
 
 h5 {
@@ -70,6 +81,11 @@ h5 {
   background: var(--white);
   border-radius: 8px;
   box-shadow: 0px 4px 80px 20px rgba(143, 150, 157, 0.15);
+  visibility: visible;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
 }
 .service_first .service_image {
   padding: 28px 77px 50px 70px;
@@ -138,6 +154,11 @@ h5 {
   padding: 50px;
   border-radius: 10px;
   transition: all 0.5s ease;
+  visibility: visible;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
 }
 .icon-box .icon_image {
   display: inline-block;
@@ -173,6 +194,11 @@ h5 {
 }
 .icon-box:hover .icon_btn {
   opacity: 1;
+  visibility: visible;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
 }
 
 .about_image {
@@ -215,6 +241,11 @@ h5 {
 
 .about_list {
   margin-top: 20px;
+  visibility: visible;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
 }
 .about_list ul {
   padding-left: 0;
@@ -236,22 +267,19 @@ h5 {
   padding: 16px 48px;
 }
 
+.about_right {
+  margin-top: 30px;
+}
 .about_right .about_s_image {
   position: relative;
 }
 .about_right .about_s_image img:last-child {
-  position: absolute;
-  right: -40px;
-  bottom: 136px;
+  -webkit-animation: animCircle 15s infinite linear;
+          animation: animCircle 15s infinite linear;
 }
 
 .about_center .about_s_image {
   position: relative;
-}
-.about_center .about_s_image img:last-child {
-  position: absolute;
-  right: 0;
-  bottom: 136px;
 }
 
 .funfact {
@@ -338,6 +366,11 @@ h5 {
   line-height: 30px;
   color: var(--title_h2-color);
   font-weight: 600;
+  visibility: visible;
+  -webkit-animation-duration: 2500ms;
+          animation-duration: 2500ms;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
 }
 .location .location_image img {
   width: 100%;
@@ -367,6 +400,81 @@ h5 {
   padding: 90px 0 50px 0;
 }
 
+@-webkit-keyframes animCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes float-bob-x {
+  0% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes float-bob-x {
+  0% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+.float-bob-x {
+  -webkit-animation-name: float-bob-x;
+  animation-name: float-bob-x;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.zoom-in-zoom-out {
+  position: absolute;
+  right: -40px;
+  bottom: 136px;
+  -webkit-animation: zoom-in-zoom-out 5s ease-out;
+          animation: zoom-in-zoom-out 5s ease-out;
+}
+
+@-webkit-keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 img {
   max-width: 100%;
 }
@@ -480,6 +588,11 @@ h6 {
 
 .section_title {
   margin-bottom: 50px;
+  visibility: visible;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
 }
 .section_title h2 {
   margin-bottom: 15px;
@@ -570,6 +683,11 @@ header {
 
 footer {
   padding: 100px 0 0 0;
+  visibility: visible;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
 }
 footer h6 {
   color: var(--footer_number);
@@ -685,14 +803,17 @@ footer .footer_bottom p {
   .about_center .about_list {
     margin-bottom: 50px;
   }
+  .about_center .about_s_image .zoom-in-zoom-out {
+    right: 35px;
+  }
   .ma5menu__toggle {
     display: block;
   }
   .about_right {
     padding-bottom: 40px;
   }
-  .about_right .about_s_image img:last-child {
-    right: 0;
+  .about_right .about_s_image .zoom-in-zoom-out {
+    right: 20px;
   }
 }
 @media screen and (max-width: 767px) {

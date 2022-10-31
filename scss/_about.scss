@@ -39,6 +39,9 @@
 
 .about_list{
     margin-top: 20px;
+    visibility: visible;
+    animation-duration: 2000ms;
+    animation-name: fadeInUp;
     ul{
       padding-left: 0;
       li{
@@ -60,13 +63,12 @@
     }
   }
   .about_right{
+    margin-top: 30px;
     .about_s_image{
         position: relative;
         img{
             &:last-child{
-                position: absolute;
-                right: -40px;
-                bottom: 136px;
+                animation:animCircle 15s infinite linear;
             }
         }
     }
@@ -74,13 +76,6 @@
   .about_center{
     .about_s_image{
         position: relative;
-        img{
-            &:last-child{
-                position: absolute;
-                right: 0;
-                bottom: 136px;
-            }
-        }
     }
 }
 
@@ -177,6 +172,9 @@
             line-height: 30px;
             color: var(--title_h2-color);
             font-weight: 600;
+            visibility: visible; 
+            animation-duration: 2500ms; 
+            animation-name: fadeInLeft;
         }
         img{
             width: 100%;
@@ -201,4 +199,47 @@
   .patner_bg{
     background: var(--about_bg_color);
     padding: 90px 0 50px 0;
+  }
+
+  
+@keyframes animCircle{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+
+  
+  @keyframes float-bob-x {
+    0% {
+      transform: translateY(-30px);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(-30px);
+    }
+  }
+  
+  .float-bob-x {
+    -webkit-animation-name: float-bob-x;
+    animation-name: float-bob-x;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  .zoom-in-zoom-out {
+    position: absolute;
+    right: -40px;
+    bottom: 136px;
+    animation: zoom-in-zoom-out 5s ease-out;
+  }
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(0, 0);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
   }
