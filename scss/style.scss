@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('bootstrap.min.css');
 @import url('fonts/ionicons/css/ionicons.css');
+@import url('../plugin/menu/ma5-menu.css');
+@import url('animate.min.css');
 
 :root {
   --title_color: #373F50;
@@ -45,11 +47,18 @@ img{
     max-width: 100%;
 }
 
-@media (min-width: 1400px){
+@media (min-width: 1200px){
     .container {
-        max-width: 1236px;
+        max-width: 1200px;
     }
   }
+  a{
+    text-decoration: none;
+  }
+  .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
   .btn-176{
     background: var(--Creatino-Blue);
     color: var(--white);
@@ -76,8 +85,8 @@ img{
     font-weight: 500;
     transition: all 0.5s ease;
     &:hover{
-      border: 1px solid var(--Creatino-Blue);
-      background: transparent;
+      box-shadow: 0px 6px 30px 3px rgba(0, 124, 255, 0.35);
+      color: var(--white);
     }
   }
   .btn-135{
@@ -89,10 +98,11 @@ img{
     font-weight: 500;
   }
   .btn-133{
-    padding: 12px 32px;
-    line-height: 27px;
+    line-height: 37px;
     border: 1px solid transparent;
     font-size: 14px;
+    width: 133px;
+    height: 52px;
     border-radius: 32.5px;
     font-weight: 500;
     background: var(--white);
@@ -132,9 +142,11 @@ img{
   h6{
     font-size: 14px;
   }
-  
 .section_title{
   margin-bottom: 50px;
+  visibility: visible;
+  animation-duration: 2000ms;
+  animation-name: fadeInUp;
   h2{
     margin-bottom: 15px;
   }
@@ -145,21 +157,70 @@ img{
   }
 }
 header{
-  border-bottom: 1px solid var(--body-color);
+  border-bottom: 1px solid #EFEEF7;
   padding: 5px 0;
-  .icon_btn{
-    a{
+}
+.icon_btn{
+  ul{
+    margin: 0;
+    padding: 0;
+    >li{
+      display: inline-flex;
+      position: relative;
       &:last-child{
-        background: var(--Creatino-Blue);
-        color: var(--white);
-        margin-left: 15px;
-        &:hover{
-          background: var(--white);
-          color: var(--Creatino-Blue);
+        >a{
+          margin-left: 15px;
+          background: var(--Creatino-Blue);
+          color: var(--white);
+        }
+      }
+      &:hover{
+        a{
+          &:hover{
+            background: var(--white);
+            color: var(--Creatino-Blue);
+          }
+        }
+        ul.drop_down{
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      ul.drop_down{
+        position: absolute;
+        width: 200px;   
+        background: var(--white);
+        padding: 10px 15px;
+        top: 65px;
+        left: -42px;
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease;
+        box-shadow: 0px 4px 80px 20px rgba(143, 150, 157, 0.15);
+        li{
+          display: block;
+          padding: 5px 0;
+          a{
+            background: transparent;
+            color: var(--black);
+            font-size: 14px;
+            line-height: 24px;
+            margin-left: 0;
+          }
+          &:hover{
+            a{
+              background: none;
+              color: var(--Creatino-Blue);
+            }
+          }
         }
       }
     }
   }
+}
+.ma5menu__toggle{
+  display: none;
 }
 .navbar-nav{
   margin: 0 auto;
@@ -185,6 +246,9 @@ header{
 }
 footer{
   padding: 100px 0 0 0;
+  visibility: visible; 
+  animation-duration: 1500ms; 
+  animation-name: fadeInUp;
   h6{
     color: var(--footer_number);
     font-weight: 700;
@@ -204,14 +268,29 @@ footer{
         border-radius: 7px;
         text-align: center;
         line-height: 28px;
+        transition: all 0.5s ease;
         i{
           color: var(--social-bg-color);
+        }
+      }
+      &:hover{
+        a{
+          background: var(--second-color);
+          i{            
+            color: var(--white);
+          }
         }
       }
     }
   }
   img{
     margin-bottom: 20px;
+  }
+  p{
+    span{
+      color: var(--Creatino-Blue);
+      font-weight: 600;
+    }
   }
   .footer_bottom{
     background: var(--Creatino-Blue);
@@ -251,11 +330,16 @@ footer{
 @media screen and (max-width: 1400px) {
   .home{
     h1{
-      padding: 0 190px;
+      padding: 0 210px;
     }
     p{
       padding: 0 350px;
     }
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1440px){
+  .icon-box{
+    padding: 50px 15px;
   }
 }
 @media screen and (max-width: $breakpoint-largedesktop) {
@@ -270,6 +354,25 @@ footer{
   .service_first{
       margin-bottom: 30px;
   }
+  header{
+    .icon_btn{
+      ul{
+        >li{
+          &:last-child{
+            >a{
+              margin-left: 5px;
+            }
+          }
+          ul.drop_down{
+            left: -50px;
+          }
+        }
+      }
+    }
+    .navbar-nav .nav-item{
+      padding-right: 18px;
+    }
+  }
 }
 @media screen and (max-width: $breakpoint-desktop) {
   .home{
@@ -280,19 +383,33 @@ footer{
       padding: 0 130px;
     }
   }
-  .about_right{
-    padding-bottom: 30px;
-    .about_image{
-        img{
-            &:nth-child(3){
-                right: 0;
-                bottom: 0;
-            }
-        }
-    }
-  }
   .service_two{
     margin-bottom: 30px;
+  }
+  .locaton_right{
+    padding-left: 0;
+  }
+  .about_center{
+    .about_list{
+      margin-bottom: 50px;
+    }
+    .about_s_image{
+      .zoom-in-zoom-out{
+        right: 35px;
+      }
+    }
+  }  
+.ma5menu__toggle{
+  display: block;
+  }
+
+  .about_right{
+    padding-bottom: 40px;
+    .about_s_image{
+      .zoom-in-zoom-out{
+        right: 20px;
+      }
+    }
   }
 }
 @media screen and (max-width: $breakpoint-tablet) {

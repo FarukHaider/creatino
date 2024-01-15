@@ -39,6 +39,9 @@
 
 .about_list{
     margin-top: 20px;
+    visibility: visible;
+    animation-duration: 2000ms;
+    animation-name: fadeInUp;
     ul{
       padding-left: 0;
       li{
@@ -60,27 +63,19 @@
     }
   }
   .about_right{
-    .about_image{
-        text-align: right;
+    margin-top: 30px;
+    .about_s_image{
+        position: relative;
         img{
-            &:nth-child(3){
-                position: absolute;
-                right: -110px;
-                bottom: 131px;
+            &:last-child{
+                animation:animCircle 15s infinite linear;
             }
         }
     }
   }
   .about_center{
-    .about_image{
-        text-align: center;
-        img{
-            &:nth-child(3){
-                position: absolute;
-                right: 0;
-                bottom: 131px;
-            }
-        }
+    .about_s_image{
+        position: relative;
     }
 }
 
@@ -89,7 +84,7 @@
     justify-content: space-around;
     text-align: center;
     flex-flow: row wrap;
-    padding: 125px 0;
+    padding: 65px 0 120px 0;
     .funfact_content{
         h1{
             font-size: 60px;
@@ -103,6 +98,11 @@
             margin-top: 25px;
             color: var(--about_para-color);
         }
+        span{
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 25px;
+        }
     }
     .funfact_content{
         &:first-child{
@@ -114,9 +114,15 @@
             h1{
                 color: var(--funfact_yellow_color);
             }
+            span{
+                color: var(--funfact_yellow_color);
+            }
         }
         &:nth-child(3){
             h1{
+                color: var(--funfact_green_color);
+            }
+            span{
                 color: var(--funfact_green_color);
             }
         }
@@ -132,7 +138,7 @@
     }
 }
 .locaton_left{
-    padding-right: 50px;
+    padding-right: 35px;
     padding-left: 0;
     h2{
         span{
@@ -163,9 +169,15 @@
             top: 35px;
             text-transform: uppercase;    
             text-align: center;
-            line-height: 28px;
+            line-height: 30px;
             color: var(--title_h2-color);
             font-weight: 600;
+            visibility: visible; 
+            animation-duration: 2500ms; 
+            animation-name: fadeInLeft;
+        }
+        img{
+            width: 100%;
         }
     }
   }
@@ -187,4 +199,47 @@
   .patner_bg{
     background: var(--about_bg_color);
     padding: 90px 0 50px 0;
+  }
+
+  
+@keyframes animCircle{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+
+  
+  @keyframes float-bob-x {
+    0% {
+      transform: translateY(-30px);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(-30px);
+    }
+  }
+  
+  .float-bob-x {
+    -webkit-animation-name: float-bob-x;
+    animation-name: float-bob-x;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  .zoom-in-zoom-out {
+    position: absolute;
+    right: -40px;
+    bottom: 136px;
+    animation: zoom-in-zoom-out 5s ease-out;
+  }
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(0, 0);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
   }
